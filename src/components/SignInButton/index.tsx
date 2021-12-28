@@ -5,16 +5,17 @@ import styles from './styles.module.scss';
 import { FiX } from 'react-icons/fi'
 
 export const SignInButton = () => {
-    const { authenticate, isAuthenticated, logout} = useMoralis();
+    const { authenticate, isAuthenticated, logout, user} = useMoralis();
     
     return (
         <>
             {isAuthenticated ? (
                 <button 
                 className={styles.signInButton}
-                onClick={logout} >
+                onClick={logout} 
+                >
                 <img src="/images/metamask.svg" />
-                Logout
+                {user.get("username")}
                 <FiX color="#737380" className={styles.closeIcon}/>
                 </button>
             ) : (
