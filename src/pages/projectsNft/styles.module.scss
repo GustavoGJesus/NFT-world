@@ -4,7 +4,7 @@
     padding: 0 2rem;
 }
 
-.projects{
+.posts{
     max-width: 720px;
     margin: 5rem auto 0;
 
@@ -14,14 +14,14 @@
         & + a {
             margin-top: 2rem;
             padding-top: 2rem;
-            border-top: 1px solid var(--green-500)
+            border-top: 1px solid var(--red-500)
         }
 
         time {
             font-size: 1rem;
             display: flex;
             align-items: center;
-            color: var(--green-500)
+            color: var(--blue-300)
         }
 
         strong{
@@ -33,13 +33,13 @@
         }
 
         p{
-            color: var(--green-500);
+            color: var(--white);
             margin-top: 0.5rem;
             line-height: 1.625rem;
         }
 
         &:hover strong{
-            color: var(--brown-600)
+            color: var(--white-700)
         }
     }
 }

@@ -1,4 +1,5 @@
 import { SignInButton } from '../SignInButton';
+import  Link  from 'next/link';
 
 import styles from './styles.module.scss';
 
@@ -7,10 +8,16 @@ export function Header(){
     return(
         <header className={styles.headerContainer}>
             <div className={styles.headerContent}>
-                <img src="/images/logo.png" alt="nft world" />
+                <Link href="/" prefetch>
+                    <img src="/images/logo.png" alt="nft world" />
+                </Link>
                 <nav>
-                    <a href="#">Home</a>
-                    <a href="#">Information</a>
+                    <Link href="/" prefetch>
+                        <a>Home</a>
+                    </Link>
+                    <Link  href="/projectsNft" prefetch>
+                        <a>Projects</a>
+                    </Link>
                 </nav>
                 <SignInButton />
             </div>
