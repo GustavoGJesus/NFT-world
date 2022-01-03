@@ -1,5 +1,7 @@
 import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
+
+import motion from 'framer-motion';
 import styles from './styles.module.scss';
 
 interface SubscribeButtonProps {
