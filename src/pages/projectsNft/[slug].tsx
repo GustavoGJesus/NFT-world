@@ -11,7 +11,6 @@ interface PostProps {
         title: string;
         content: string;
         updatedAt: string;
-        image: string;
     }
 }
 
@@ -30,7 +29,6 @@ export default function Post({post}: PostProps){
                         className={styles.postContent}
                         dangerouslySetInnerHTML={{__html: post.content}}
                     />
-                   <img src={post.image} alt="image" />
                 </article>
             </main>
         </>
@@ -52,11 +50,7 @@ export const getServerSideProps : GetServerSideProps = async ({req, params}) => 
             day: '2-digit',
             month: 'long',
             year: 'numeric'
-        }),
-        image: {
-            url: 'https://www.google.com.br/url?sa=i&url=https%3A%2F%2Fwww.oficinadanet.com.br%2Fgames%2F39038-bomb-crypto-entenda-como-funciona-nft&psig=AOvVaw23Cbw2-AjN3sZ8G0tot9RB&ust=1641029824053000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCPi97NDejfUCFQAAAAAdAAAAABAD'
-        }
-          
+        })
     }
 
     return{ 

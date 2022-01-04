@@ -26,7 +26,7 @@ export default function projectsNft( {posts}: PostsProps){
     return(
         <>
             <Head>
-                <title>Posts | Ignews</title>
+                <title>Projects | NFT world</title>
             </Head>
             <motion.div
                 initial={{ opacity: 0 }}
